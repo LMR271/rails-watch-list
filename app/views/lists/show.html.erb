@@ -4,11 +4,13 @@
   <% @list.bookmarks.each do |bookmark| %>
     <li>
       <strong><%= bookmark.movie.title %></strong>: <%= bookmark.comment %>
-      <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+      <%= link_to "🗑️", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "Add a movie to this list", new_list_bookmark_path(@list) %>
+<%= link_to "Add a movie to this list", new_list_bookmark_path(@list), class: "btn btn-flat" %> <br>
 <br>
-<%= link_to "Back to lists", lists_path %>
+<%= link_to "Delete this list", list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Delete this list and all its movies?" }, class: "btn btn-flat" %><br>
+<br>
+<%= link_to "Back to lists", lists_path, class: "btn btn-flat" %>

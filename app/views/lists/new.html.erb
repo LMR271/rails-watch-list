@@ -2,7 +2,8 @@
 
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
-  <%= f.button :submit, "Create list" %>
+  <%= f.input :photo, as: :file%>
+  <%= f.button :submit, "Create list", class: "btn btn-flat" %>
 <% end %>
 
-<%= link_to "Back to lists", lists_path %>
+<br><%= link_to "Back to lists", lists_path, class: "btn btn-flat" %>

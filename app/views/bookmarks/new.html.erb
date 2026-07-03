@@ -3,7 +3,7 @@
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.association :movie %>
   <%= f.input :comment %>
-  <%= f.button :submit, "Add to list" %>
+  <%= f.button :submit, "Add to list", class: "btn btn-flat" %>
 <% end %>
 
-<%= link_to "Back to list", list_path(@list) %>
+<br><%= link_to "Back to lists", lists_path, class: "btn btn-flat" %>

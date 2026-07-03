@@ -24,6 +24,35 @@
   </head>
 
   <body>
+
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <%= image_tag "flat-design-concept-cinema-icon-free-vector.jpg" %>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <%= link_to "Home", root_path, class: "nav-link me-3" %>
+            </li>
+          </ul>
+          <%= link_to "＋ New list", new_list_path, class: "btn btn-dark me-3" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= image_url("photo-1489599849927-2ee91cede3ba.avif") %>');">
+      <div class="container">
+        <h1>WatchLists — <strong>every movie, sorted for you</strong></h1>
+        <p>Build your own movie watchlists to track what you've seen and what's still on deck.</p>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
